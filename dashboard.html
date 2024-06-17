@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Fira+Code:wght@300..700&family=Fira+Mono:wght@400;500;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poetsen+One&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./static/style.css">
+    <title>Task Dashboard</title>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Navbar -->
+    <nav class="navbar navbar-light">
+        <div class="container-fluid">
+                <div class="nav-brand-task-manager ms-5">
+                    <a class="navbar-brand ms-3" href="./index.html">TaskSwift</a>
+                </div>
+                <div class="nav-profile">
+                    <span class="navbar-text me-3">Welcome, Victor</span>
+                    <button class="btn btn-outline-dark me-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user-circle"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark me-2" aria-labelledby="userDropdown">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="./index.html">Logout</a></li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
+
+    <!-- Task Sections -->
+    <div class="container my-5 px-5">
+        <div class="d-flex justify-content-between task-top mx-5">
+            <h2 class="mb-0 pb-0 tasks-heading">Tasks</h2>
+            <button class="btn add-task" data-bs-toggle="modal" data-bs-target="#addTaskModal">+ Add a task</button>
+        </div>
+        <div class="accordion mx-5" id="taskAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Current
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#taskAccordion">
+                    <div class="accordion-body">
+                        <div class="task-item justify-content-center d-md-flex justify-content-md-between align-items-center mb-3">
+                            <div>
+                                <strong>Task Manager Application:</strong> <span class="task-desc">Build a Bootstrap-powered Task Management Application...</span>
+                                <div>Assigned to: Victor, Jane, Mark</div>
+                                <span class="badge bg-danger">High Priority</span>
+                                <span class="badge bg-info text-dark">Not Yet Started</span>
+                            </div>
+                            <div>
+                                <span class="text-muted">Due: 2024-06-31</span>
+                                <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#taskDetailsModal1">View Details</button>
+                            </div>
+                        </div>
+                        <div class="task-item justify-content-center d-md-flex justify-content-md-between align-items-center mb-3">
+                            <div>
+                                <strong>JavaScript and the Document Object Model (DOM):</strong> <span class="task-desc">Enhance proficiency in manipulating HTML documents dynamically </span>
+                                <div>Assigned to: Alice</div>
+                                <span class="badge bg-warning">Neutral</span>
+                                <span class="badge bg-primary">Working on It</span>
+                            </div>
+                            <div>
+                                <span class="text-muted">Due: 2024-06-25</span>
+                                <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#taskDetailsModal2">View Details</button>
+                            </div>
+                        </div>
+                        <div class="task-item justify-content-center d-md-flex justify-content-md-between align-items-center mb-3">
+                            <div>
+                                <strong>JavaScript Objects:</strong> <span class="task-desc">Deepen understanding and proficiency in manipulating JavaScript objects</span>
+                                <div>Assigned to: Bob, Charlie</div>
+                                <span class="badge bg-success">Low Priority</span>
+                                <span class="badge bg-warning text-dark">Waiting for Review</span>
+                            </div>
+                            <div>
+                                <span class="text-muted">Due: 2024-06-20</span>
+                                <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#taskDetailsModal3">View Details</button>
+                            </div>
+                        </div>
+                        <div class="task-item justify-content-center d-md-flex justify-content-md-between align-items-center mb-3">
+                            <div>
+                                <strong>Bootstrap Components:</strong> <span class="task-desc">Practice implementing various Bootstrap components in a web project to enhance its design and functionality.</span>
+                                <div>Assigned to: Dave</div>
+                                <span class="badge bg-success">Low Priority</span>
+                                <span class="badge bg-primary">Working on It</span>
+                            </div>
+                            <div>
+                                <span class="text-muted">Due: 2024-06-15</span>
+                                <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#taskDetailsModal5">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Completed
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#taskAccordion">
+                    <div class="accordion-body">
+                        <div class="task-item justify-content-center d-md-flex justify-content-md-between align-items-center mb-3">
+                            <div>
+                                <strong>E-commerce API:</strong> <span class="task-desc">Build a user-friendly platform where customers can effortlessly browse products...</span>
+                                <div>Assigned to: Victor</div>
+                                <span class="badge bg-secondary">Completed</span>
+                            </div>
+                            <div>
+                                <span class="text-muted">Completed: 2024-05-26</span>
+                                <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#taskDetailsModal4">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Task Details Modals -->
+    <div class="modal fade" id="taskDetailsModal1" tabindex="-1" aria-labelledby="taskDetailsModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="taskDetailsModalLabel1">Task 1 Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Task Manager Application:</strong> Task 1</p>
+                    <p><strong>Description:</strong> Build a Bootstrap-powered Task Management Application and meet all the requirements.</p>
+                    <p><strong>Due Date:</strong> 2024-06-31</p>
+                    <p><strong>Priority:</strong> High Priority</p>
+                    <p><strong>Assigned to:</strong> Victor, Jane, Mark</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger me-auto">Delete</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Edit</button>
+                    <button type="button" class="btn btn-success">Mark as Complete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="taskDetailsModal2" tabindex="-1" aria-labelledby="taskDetailsModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="taskDetailsModalLabel2">Task 2 Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>JavaScript and the Document Object Model (DOM):</strong> Task 2</p>
+                    <p><strong>Description:</strong> Enhance proficiency in manipulating HTML documents dynamically using JavaScript, focusing on the manipulation of arrays and objects to modify document content and structure.</p>
+                    <p><strong>Due Date:</strong> 2024-06-25</p>
+                    <p><strong>Priority:</strong> Neutral</p>
+                    <p><strong>Assigned to:</strong> Alice</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger me-auto">Delete</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Edit</button>
+                    <button type="button" class="btn btn-success">Mark as Complete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="taskDetailsModal3" tabindex="-1" aria-labelledby="taskDetailsModalLabel3" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="taskDetailsModalLabel3">Task 3 Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>JavaScript Objects:</strong> Task 3</p>
+                    <p><strong>Description:</strong> Deepen understanding and proficiency in manipulating JavaScript objects, including creating objects, accessing properties and methods, using constructors, and working with prototypes.</p>
+                    <p><strong>Due Date:</strong> 2024-06-20</p>
+                    <p><strong>Priority:</strong> Low Priority</p>
+                    <p><strong>Assigned to:</strong> Bob, Charlie</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger me-auto">Delete</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Edit</button>
+                    <button type="button" class="btn btn-success">Mark as Complete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="taskDetailsModal4" tabindex="-1" aria-labelledby="taskDetailsModalLabel4" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="taskDetailsModalLabel4">Task 4 Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>E-commerce API:</strong> Task 4</p>
+                    <p><strong>Description:</strong> Build a user-friendly platform where customers can effortlessly browse products, add them to their shopping carts, and place orders. To tackle this challenge, leverage the power of Python and two essential libraries: Flask and Flask-SQLAlchemy.</p>
+                    <p><strong>Due Date:</strong> 2024-05-26</p>
+                    <p><strong>Priority:</strong> Completed</p>
+                    <p><strong>Assigned to:</strong> Victor</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger me-auto">Delete</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Edit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="taskDetailsModal5" tabindex="-1" aria-labelledby="taskDetailsModalLabel5" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="taskDetailsModalLabel5">Task 5 Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Bootstrap Components:</strong> Task 5</p>
+                    <p><strong>Description:</strong> Practice implementing various Bootstrap components in a web project to enhance its design and functionality.</p>
+                    <p><strong>Due Date:</strong> 2024-06-15</p>
+                    <p><strong>Priority:</strong> Low Priority</p>
+                    <p><strong>Assigned to:</strong> Dave</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger me-auto">Delete</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Edit</button>
+                    <button type="button" class="btn btn-success">Mark as Complete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Task Modal -->
+    <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addTaskModalLabel">Add New Task</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="taskName" class="form-label">Task Name</label>
+                            <input type="text" class="form-control" id="taskName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="taskDescription" class="form-label">Description</label>
+                            <textarea class="form-control" id="taskDescription" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="taskDueDate" class="form-label">Due Date</label>
+                            <input type="date" class="form-control" id="taskDueDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="taskAssignedTo" class="form-label">Assigned to</label>
+                            <input type="text" class="form-control" id="taskAssignedTo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Priority</label><br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="priorityOptions" id="highPriority" value="High Priority">
+                                <label class="form-check-label" for="highPriority">High Priority</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="priorityOptions" id="neutralPriority" value="Neutral">
+                                <label class="form-check-label" for="neutralPriority">Neutral</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="priorityOptions" id="lowPriority" value="Low Priority">
+                                <label class="form-check-label" for="lowPriority">Low Priority</label>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Add Task</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-auto">
+        <div class="container p-3">
+            <div class="row justify-content-around">
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-end mb-md-0">
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center mb-md-0">
+                    <a href="#">Contact</a>
+                </div>
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start b-md-0">
+                    <a href="#">Policies</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center copyright">
+            &copy; 2024 TaskSwift. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>

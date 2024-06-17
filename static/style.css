@@ -1,0 +1,151 @@
+body {
+    height: 100%;
+    margin: 0;
+    flex: -1;
+    background: linear-gradient(-0.4turn, #f69d3c, #ebf8e1, #3f87a6);
+    background-repeat: no-repeat;
+}
+
+.navbar-brand {
+    font-size: 40px;
+    font-family: "Kaushan Script", cursive;
+}
+
+.navbar-nav .nav-link {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+}
+
+.navbar-nav .nav-item {
+    font-family: "Baloo Bhaina 2", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#sign-in {
+    line-height: 10px;
+}
+
+.forgot-password {
+    text-decoration: underline;
+}
+
+.forgot-password:hover {
+    text-decoration: none;
+}
+
+.sign-up:hover {
+    text-decoration: none;
+}
+
+.jumbotron {
+    background: url('header-image.jpg') no-repeat center center;
+    background-size: cover;
+    background-color: aliceblue;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.welcome-taskswift {
+    font-weight: 500;
+    font-family: "Baloo Bhaina 2", sans-serif;
+}
+
+.jumborton-message {
+    font-weight: 400;
+    font-family: "Baloo Bhaina 2", sans-serif;
+}
+
+.carousel-caption {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(29, 77, 119, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.carousel-item img {
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.task-desc {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 400px;
+}
+
+footer {
+    /* background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c); */
+    font-family: "Baloo Bhaina 2", sans-serif;
+}
+
+footer .row div {
+    
+    font-size: 16px;
+}
+
+.copyright {
+    font-size: 14px;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* dashboard.html */
+
+.nav-profile {
+    font-weight: 500;
+    font-family: "Baloo Bhaina 2", sans-serif;
+    color: white;
+}
+
+.tasks-heading {
+    font-weight: 500;
+    font-family: "Baloo Bhaina 2", sans-serif;
+    align-content: end;
+}
+
+.navbar-text {
+    font-size: 20px;
+}
+
+.dropdown-menu {
+   min-width: 6rem;
+}
+
+.task-top {
+    height: 50px;
+}
+
+.add-task {
+    background-color: rgb(66, 113, 167);
+    color: white;
+    border-radius: 8px;
+}
+
+.add-task:hover {
+    background-color: rgb(30, 96, 171);
+    color: white;
+    border-radius: 8px;
+}
+
+.accordion-body div button:hover {
+    text-decoration: none;
+}

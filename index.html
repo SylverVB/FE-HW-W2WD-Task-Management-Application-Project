@@ -1,0 +1,267 @@
+<!-- Mini Project: Task Management Application Project
+
+Welcome to the Task Management Application project! 
+
+Welcome to the exciting Task Management Application project! In this journey, you'll dive into the world of UI/UX design and Bootstrap 
+to create a powerful tool for organizing and tracking your tasks effectively.
+
+Throughout this project, you'll harness the knowledge gained from our learning objectives to craft a user-friendly interface that prioritizes 
+both functionality and aesthetics. By understanding the principles of UI and UX design, you'll ensure that your task management application not 
+only looks great but also provides a seamless user experience.
+
+With Bootstrap at your disposal, you'll learn how to create responsive layouts and implement essential components with ease. Whether you're 
+designing forms, styling text and images, or incorporating interactive elements, Bootstrap will be your go-to framework for achieving consistency 
+and efficiency in your application.
+
+So, get ready to embark on this journey of creativity and innovation as you build a Task Management Application that not only meets the needs of 
+its users but also showcases your newfound skills in UI/UX design and Bootstrap development. Let's bring your ideas to life and create something 
+truly remarkable!
+
+In this Bootstrap-powered Task Management Application project, you'll embark on a journey to develop a user-friendly and efficient tool for 
+managing tasks effectively. This project builds upon your understanding of HTML and introduces you to the world of Bootstrap, a popular front-end 
+framework for building responsive and mobile-first web projects.
+
+To successfully create the Task Management Application with Bootstrap, you'll need to meet the following project requirements:
+
+1. User Interface Design:
+- Create 1-2 wireframes and 1-2 mid-fidelity prototypes using Figma or similar tools to outline the layout and flow of the application.
+- Design visually appealing and intuitive UI/UX using Bootstrap components like Navbar, Cards, and Forms.
+2. Task Management Features:
+1) Home Page:
+- Implement a landing page with a Navbar, Jumbotron and/or Header Image for a welcome message, and Cards to display key features.
+2) Task Dashboard Page:
+- Utilize Cards, Forms, and Buttons to create an interactive dashboard for managing tasks. Cards should have basic information per task 
+like Name, brief description, due date, etc. 
+3) Task Details Page:
+- Design a detailed view for individual tasks using Cards similar to the Task Dashboard Page but with more detailed information about each task.
+4) Task Creation Page:
+- Develop a form layout using Bootstrap Forms and Input Groups for adding new tasks.
+5) Register Page:
+- Create a registration form with Bootstrap Form components for new users to sign up.
+- Apply Bootstrap Form validation to ensure the correctness of user-provided information.
+6) Login Page:
+- Develop a form layout using Bootstrap Forms with input fields for username and password.
+- Apply Bootstrap Form validation to ensure the correctness of user credentials.
+3. Bootstrap Integration:
+- Utilize Bootstrap's grid system for layout design and component styling across all HTML pages.
+- Apply Bootstrap typography, color palette, and utilities for consistent styling.
+4. Responsive Design:
+- Ensure the application layout is responsive and accessible across various devices using Bootstrap's responsive grid and utilities.
+- Test responsiveness using Bootstrap's built-in breakpoint classes and media queries.
+5. User Experience Enhancements:
+Enhance user experience through intuitive navigation using Bootstrap Navbar and/or Dropdown menus.
+6. Carousel Component (Bonus):
+- Implement a Bootstrap Carousel component to showcase featured tasks or announcements on the home page.
+- Utilize Bootstrap's carousel indicators, controls, and responsive behavior for seamless navigation.
+7. Accordion Component (Bonus):
+- Integrate a Bootstrap Accordion component for organizing task categories or FAQ sections on relevant pages.
+- Utilize Bootstrap's accordion groups, headings, and collapsible panels for a clean and space-efficient layout.
+8. Badge Component (Bonus):
+- Implement Bootstrap Badge components to display task statuses, priorities, or tags for enhanced categorization and organization.
+- Utilize Bootstrap's badge styling and contextual variations to convey task attributes effectively.
+
+Project Tips:
+
+1. Start with Wireframes and Prototypes:
+- Begin by creating wireframes and prototypes using tools like Figma to visualize the layout and flow of your task management application. This will
+help you plan the user interface effectively.
+2. Bootstrap Components Selection:
+- Choose Bootstrap components wisely based on their suitability for different pages. For example, use Cards for displaying task details and Forms for 
+creating or editing tasks.
+3. Responsive Design Matters:
+- Prioritize responsive design using Bootstrap's grid system and utilities to ensure your application looks great and functions well on various devices 
+and screen sizes.
+4. Typography and Color Choices:
+- Pay attention to typography and color choices to maintain consistency and enhance readability across your application. Bootstrap provides a variety of 
+typography and color utilities to assist you.
+5. Use Bootstrap Utility Classes:
+- Leverage Bootstrap utility classes for quick and efficient styling adjustments. These classes offer predefined styles for common tasks like spacing, 
+alignment, and display properties.
+6. Explore Bootstrap Bonus Components:
+- Consider integrating Bootstrap bonus components like Carousels, Accordions, and Badges to enhance the visual appeal and functionality of your application, 
+earning you extra credit.
+7. Test and Iterate:
+- Test your application thoroughly on multiple browsers and devices to ensure cross-browser compatibility and responsiveness. Iterate based on feedback to 
+improve usability and functionality. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Fira+Code:wght@300..700&family=Fira+Mono:wght@400;500;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poetsen+One&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./static/style.css">
+    <title>Task Management Application</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-5" href="#">TaskSwift</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav d-flex col-3 col-lg-9 justify-content-center align-items-center justify-content-lg-evenly align-items-lg-center ms-auto">
+                    <li class="nav-item" id="navbar-manager"><a class="nav-link" href="#">Why our task manager?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item" id="sign-in"><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signInModal">Sign In</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="container-fluid p-4">
+        <div class="container text-center">
+            <h1 class="display-4 welcome-taskswift">Welcome to TaskSwift</h1>
+            <p class="lead jumborton-message">Stay organized and manage your tasks effectively</p>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./static/images/vbgetorganized.jpg" class="d-block w-100 mx-auto" alt="Feature 1">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-content-center mx-auto p-3">
+                    <h5>Always Stay Organized</h5>
+                    <p>Keep all your tasks in one place and stay organized.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./static/images/vbeasytouse.jpg" class="d-block w-100 mx-auto" alt="Feature 2">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center mx-auto p-3">
+                    <h5>Easy to Use</h5>
+                    <p>Our intuitive design makes managing tasks simple and efficient.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./static/images/vbteamwork.jpg" class="d-block w-100 mx-auto" alt="Feature 3">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center mx-auto p-3">
+                    <h5>Collaborate with Team</h5>
+                    <p>Work together with your team and share task progress.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-auto">
+        <div class="container p-3">
+            <div class="row justify-content-around">
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-end mb-md-0">
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center mb-md-0">
+                    <a href="#">Contact</a>
+                </div>
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start b-md-0">
+                    <a href="#">Policies</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center copyright">
+            &copy; 2024 TaskSwift. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Sign In Modal -->
+    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="./dashboard.html" method="GET">
+                        <div class="mb-3">
+                            <label for="signInEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="signInEmail" pattern="[\w]+@[\w]+[.][a-z]{2,3}" placeholder="name@example.com" required>
+                            <div class="invalid-feedback">Please enter a valid email.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signInPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signInPassword" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@#$%&?!+_-])[A-Za-z\d@#$%&?!+_-]{8,}$" placeholder="8 characters long, at least 1 letter, 1 number, 1 special character" required>
+                            <div class="invalid-feedback">Password must be at least 8 characters long, contain at least one letter, one number, and one special character.</div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign In</button>
+                    </form>
+                    <div class="mt-3">
+                        <p class="ms-0">New around here?<a href="#" data-bs-toggle="modal" data-bs-target="#signUpModal" class="ms-2 sign-up">Sign Up</a></p>
+                        <a class="ps-0 forgot-password" href="#">Forgot password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="./dashboard.html" method="GET">
+                        <div class="mb-3">
+                            <label for="signUpName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="signUpName" pattern="[A-Za-z]+ [A-Za-z]+" placeholder="John Doe" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signUpEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="signUpEmail" pattern="[\w]+@[\w]+[.][a-z]{2,3}" placeholder="name@example.com" required>
+                            <div class="invalid-feedback">Please enter a valid email.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signUpPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signUpPassword" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@#$%&?!+_-])[A-Za-z\d@#$%&?!+_-]{8,}$" placeholder="8 characters long, at least 1 letter, 1 number, 1 special character">
+                            <div class="invalid-feedback">Password must be at least 8 characters long, contain at least one letter, one number, and one special character.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signUpConfirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="signUpConfirmPassword" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@#$%&?!+_-])[A-Za-z\d@#$%&?!+_-]{8,}$" required>
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
